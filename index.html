@@ -342,7 +342,7 @@
   function showModal(title,copy,type){modalTrigger=document.activeElement;$('#modal-title').textContent=title;$('#modal-copy').textContent=copy;videoWrap.classList.toggle('visible',type==='video');qr.classList.toggle('visible',type==='qr');modal.classList.toggle('video-open',type==='video');if(type==='video')setSubtitles(true);modal.classList.add('open');document.body.classList.add('modal-open');if(type==='video')fitVideoModal();$('.modal-close').focus()}
   function closeModal(){modal.classList.remove('open','video-open');document.body.classList.remove('modal-open');video.pause();if(video.readyState>0)video.currentTime=0;videoWrap.classList.remove('visible');qr.classList.remove('visible');panel.style.width='';if(modalTrigger?.isConnected)modalTrigger.focus()}
   $$('[data-modal]').forEach(b=>b.onclick=()=>{const d=messages[b.dataset.modal];showModal(d[0],d[1],b.dataset.modal==='read'?'video':'text')});
-  const openContactQr=()=>showModal('企业微信联系码','使用企业微信扫描二维码，联系 MBTV。','qr');
+  const openContactQr=()=>showModal('企业微信','使用微信扫描二维码，联系MBTV。','qr');
   $('.qr-trigger').onclick=openContactQr;$('.contact-open-qr').onclick=openContactQr;
   videoPlay.onclick=()=>{video.play().catch(()=>{})};
   video.addEventListener('play',()=>videoWrap.classList.add('is-playing'));
