@@ -4,6 +4,7 @@ const showcaseVideos = [
   {title:'枕上仙墟 · EP02', detail:'古装短剧 · 3分40秒', src:'https://file.mbtv.me/demo/zhenshang-ep02-1080p.mp4', poster:'assets/showcase/zhenshang-ep02-cover.jpg'},
   {title:'枕上仙墟 · EP03', detail:'古装短剧 · 3分钟', src:'https://file.mbtv.me/demo/zhenshang-ep03-1080p.mp4', poster:'assets/showcase/zhenshang-ep03-cover.jpg'},
   {title:'枕上仙墟 · 真人版', detail:'真人短剧 · 5分20秒', src:'https://file.mbtv.me/demo/zhenshang-live-action-1080p.mp4', poster:'assets/showcase/zhenshang-live-action-cover.jpg'},
+  {title:'枕上仙墟 · 花絮', detail:'幕后花絮 · 2分43秒', src:'https://file.mbtv.me/demo/zhenshang-behind-the-scenes-1080p.mp4', poster:'assets/showcase/zhenshang-behind-the-scenes-cover.jpg'},
   {title:'AI教我当县令 · 预告片', detail:'短剧预告 · 58秒', src:'https://file.mbtv.me/demo/ai-county-magistrate-trailer-1080p.mp4', poster:'assets/showcase/ai-county-magistrate-trailer-cover.jpg'}
 ];
 
