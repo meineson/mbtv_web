@@ -19,12 +19,44 @@
     .eyebrow{margin:0 0 7px;color:#6bcaff;font-size:11px;font-weight:800;letter-spacing:.23em}.intro h1{margin:0;font-size:clamp(34px,3.5vw,44px);line-height:1.1;letter-spacing:-.055em}.intro p:last-child{max-width:760px;margin:9px 0 0;color:#aec2dd;font-size:13px}
     .service-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:22px;align-items:stretch;margin-top:22px}.service-heading{margin:0 0 9px;font-size:18px;line-height:1.3}.downloads{display:grid;gap:9px}.download-card{display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:13px;min-height:82px;padding:12px 16px;border:1px solid #254f83;border-radius:14px;background:linear-gradient(150deg,rgba(14,37,77,.94),rgba(5,16,39,.94));box-shadow:0 16px 38px #0005,inset 0 1px rgba(116,193,255,.12)}.download-card.mac{border-color:#40539c;background:linear-gradient(150deg,rgba(22,35,84,.93),rgba(7,17,43,.95))}
     .platform-icon{display:grid;place-items:center;width:46px;height:46px;border:1px solid #347abf;border-radius:12px;background:linear-gradient(145deg,#143d7e,#10265b);box-shadow:0 0 26px #187cda35}.mac .platform-icon{border-color:#7664c9;background:linear-gradient(145deg,#3d3089,#182760)}.platform-icon svg{width:25px;height:25px;fill:none;stroke:#9ddcff;stroke-width:1.7;stroke-linejoin:round}.mac .platform-icon svg{stroke:#c6b4ff}
-    .download-card .platform{margin:0 0 3px;color:#82caff;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.mac .platform{color:#bca9ff}.download-card h3{margin:0 0 2px;font-size:17px;line-height:1.25}.download-card .arch{margin:0;color:#a9bdd7;font-size:12px}.download-button,.cloud-button{display:flex;align-items:center;justify-content:center;min-height:36px;padding:0 13px;border:1px solid #45688f;border-radius:24px;background:#213754;color:#aebfd6;font-size:12px;font-weight:700;white-space:nowrap;cursor:not-allowed}
+    .download-card .platform{margin:0 0 3px;color:#82caff;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.mac .platform{color:#bca9ff}.download-card h3{margin:0 0 2px;font-size:17px;line-height:1.25}.download-card .arch{margin:0;color:#a9bdd7;font-size:12px}.download-button{display:flex;align-items:center;justify-content:center;min-height:36px;padding:0 13px;border:1px solid #45688f;border-radius:24px;background:#213754;color:#aebfd6;font-size:12px;font-weight:700;white-space:nowrap;cursor:not-allowed}
+    .platform-head{display:flex;align-items:center;gap:7px;margin:0 0 3px}.platform-head .platform{margin:0}
+    .version-tag{display:inline-flex;align-items:center;padding:1px 6px;border-radius:9px;font-size:10px;font-weight:700;line-height:1.3;background:rgba(53,186,255,.14);border:1px solid rgba(53,186,255,.32);color:#6cd2ff}
+    .mac .version-tag{background:rgba(188,169,255,.14);border-color:rgba(188,169,255,.32);color:#c8b7ff}
+    .version-tag[hidden],.download-meta[hidden],.version-tag:empty{display:none!important}
+    .download-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:5px;font-size:11px;color:#8ba3c2}
+    .meta-size{color:#b9cde6;font-weight:600}
+    .meta-dot{opacity:.4}
+    .meta-hash{display:inline-flex;align-items:center;gap:4px;color:#859ebd;font-size:10px;cursor:pointer;transition:color .15s}
+    .meta-hash:hover{color:#b6d7ff}
+    .meta-hash code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:10px;color:#9ec4ee;background:rgba(255,255,255,.06);padding:1px 4px;border-radius:4px}
+    .meta-hash .copy-btn{border:0;background:none;padding:0;color:#55a5ff;font-size:10px;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+    .meta-hash .copy-btn:hover{color:#89c4ff}
+    .download-card:not(.mac) a.download-button{color:#fff;border-color:#2a7dd7;background:linear-gradient(110deg,#1c52bd,#1f88f5);box-shadow:0 4px 18px rgba(28,100,210,.35);cursor:pointer;padding:0 16px;transition:filter .2s,box-shadow .2s}
+    .download-card:not(.mac) a.download-button:hover{filter:brightness(1.15);box-shadow:0 6px 24px rgba(28,100,210,.5)}
+    .download-card.mac a.download-button{color:#fff;border-color:#7565dd;background:linear-gradient(110deg,#6643ea,#2574f5);box-shadow:0 4px 18px rgba(102,67,234,.35);cursor:pointer;padding:0 16px;transition:filter .2s,box-shadow .2s}
+    .download-card.mac a.download-button:hover{filter:brightness(1.15);box-shadow:0 6px 24px rgba(102,67,234,.5)}
     .help{margin:11px 0 0;color:#91a7c5;font-size:12px}.help strong{color:#c7dbf4}.help a{color:#75caff;text-decoration:underline;text-underline-offset:3px}
-    .cloud-panel{display:flex;flex-direction:column;min-height:100%;padding:22px;border:1px solid #40539c;border-radius:16px;background:radial-gradient(circle at 80% 12%,rgba(106,83,233,.25),transparent 43%),linear-gradient(155deg,rgba(24,35,82,.96),rgba(7,17,42,.96));box-shadow:0 20px 50px #0006,inset 0 1px rgba(166,150,255,.14)}.cloud-mark{display:grid;place-items:center;width:58px;height:58px;margin:10px 0 18px;border:1px solid #7566ce;border-radius:16px;background:linear-gradient(145deg,#483891,#173365);box-shadow:0 0 38px #6652e34d}.cloud-mark svg{width:34px;height:34px;fill:none;stroke:#d3c9ff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.cloud-panel .eyebrow{color:#beaaff;margin-bottom:6px}.cloud-panel h2{font-size:clamp(23px,2.5vw,29px);margin:0 0 10px;line-height:1.25}.cloud-panel p:not(.eyebrow){margin:0;color:#b7c7e4;font-size:13px}.cloud-button{width:100%;margin-top:auto;min-height:40px;border-color:#655f9b;background:#353758;color:#bdc2dd;font-size:13px}.cloud-note{display:block;margin-top:7px;color:#8298bf;font-size:11px;text-align:center}
-    footer{border-top:1px solid #153254;background:#030a16}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:59px;color:#829ab8;font-size:12px}
-    @media(max-width:900px){.service-layout{grid-template-columns:1fr}.cloud-panel{min-height:300px}.cloud-mark{margin:8px 0 20px}.cloud-button{margin-top:28px}}
-    @media(max-width:600px){.container{width:calc(100% - 36px)}.top{height:60px}.brand{font-size:15px}.brand img{width:34px;height:34px}.top nav{gap:12px}.contact-link{padding:7px 11px;font-size:11px}main{padding:54px 0 70px}.intro p:last-child{font-size:14px}.service-layout{gap:26px;margin-top:30px}.service-heading{font-size:19px}.download-card{grid-template-columns:46px minmax(0,1fr);gap:11px;min-height:0;padding:16px}.platform-icon{width:46px;height:46px}.download-card h3{font-size:16px}.download-button{grid-column:1/-1;width:100%}.cloud-panel{padding:23px;min-height:0}.cloud-mark{width:60px;height:60px}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding:16px 0;gap:2px}}
+    .cloud-panel{display:flex;flex-direction:column;min-height:100%;padding:22px;border:1px solid #40539c;border-radius:16px;background:radial-gradient(circle at 80% 12%,rgba(106,83,233,.25),transparent 43%),linear-gradient(155deg,rgba(24,35,82,.96),rgba(7,17,42,.96));box-shadow:0 20px 50px #0006,inset 0 1px rgba(166,150,255,.14)}.cloud-mark{display:grid;place-items:center;width:58px;height:58px;margin:10px 0 18px;border:1px solid #7566ce;border-radius:16px;background:linear-gradient(145deg,#483891,#173365);box-shadow:0 0 38px #6652e34d}.cloud-mark svg{width:34px;height:34px;fill:none;stroke:#d3c9ff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.cloud-panel .eyebrow{color:#beaaff;margin-bottom:6px}.cloud-panel h2{font-size:clamp(23px,2.5vw,29px);margin:0 0 10px;line-height:1.25}.cloud-panel p:not(.eyebrow){margin:0;color:#b7c7e4;font-size:13px}.cloud-button{display:flex;align-items:center;justify-content:center;width:100%;margin-top:auto;min-height:40px;padding:0 16px;border:1px solid #8275f0;border-radius:24px;background:linear-gradient(110deg,#5e46ec,#2871f3);box-shadow:0 6px 20px rgba(94,70,236,.32);color:#fff;font-size:13px;font-weight:700;white-space:nowrap;transition:filter .2s,box-shadow .2s;cursor:pointer}.cloud-button:hover{filter:brightness(1.14);box-shadow:0 8px 26px rgba(94,70,236,.48)}.cloud-note{display:block;margin-top:7px;color:#7be0aa;font-size:11px;text-align:center}
+    .demo-section{margin-top:22px}
+    .demo-card{display:grid;grid-template-columns:148px minmax(0,1fr) auto;align-items:center;gap:20px;padding:14px 18px;border:1px solid #2d456a;border-radius:16px;background:linear-gradient(150deg,rgba(15,31,61,.94),rgba(6,16,36,.96));box-shadow:0 16px 38px #0005,inset 0 1px rgba(116,193,255,.12)}
+    .demo-cover-wrap{position:relative;width:148px;height:88px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 4px 16px #0006;flex-shrink:0}
+    .demo-cover{width:100%;height:100%;object-fit:cover;display:block}
+    .demo-tag{position:absolute;bottom:5px;left:5px;padding:1px 6px;border-radius:6px;background:rgba(5,12,24,.82);backdrop-filter:blur(6px);font-size:10px;font-weight:700;color:#fbd38d;border:1px solid rgba(246,173,85,.35);line-height:1.3}
+    .demo-info{min-width:0}
+    .demo-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+    .demo-title{margin:0;font-size:16.5px;font-weight:700;line-height:1.3;color:#edf5ff}
+    .demo-size-pill{display:inline-flex;align-items:center;padding:1px 8px;border-radius:10px;font-size:10.5px;font-weight:700;background:rgba(246,173,85,.15);border:1px solid rgba(246,173,85,.35);color:#fbd38d;line-height:1.4}
+    .demo-tip{margin:6px 0 0;color:#9eb5d2;font-size:12.5px;line-height:1.55}
+    .demo-tip code{padding:1px 6px;margin:0 2px;border-radius:5px;background:rgba(255,255,255,.08);color:#9fd2ff;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:12px;border:1px solid rgba(159,210,255,.2)}
+    .demo-action{flex-shrink:0}
+    .demo-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:0 18px;border-radius:24px;background:linear-gradient(110deg,#d97706,#ea580c);border:1px solid #f97316;box-shadow:0 4px 18px rgba(234,88,12,.35);color:#fff;font-size:12.5px;font-weight:700;white-space:nowrap;transition:filter .2s,box-shadow .2s;cursor:pointer}
+    .demo-button svg{width:15px;height:15px}
+    .demo-button:hover{filter:brightness(1.15);box-shadow:0 6px 24px rgba(234,88,12,.55)}
+    footer{border-top:1px solid #153254;background:#030a16;padding:16px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;color:#829ab8;font-size:12px}.footer-left{display:flex;flex-direction:column;gap:5px}.footer-records{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.record-link{display:inline-flex;align-items:center;gap:5px;color:inherit;text-decoration:none;transition:color .2s}.record-link:hover{color:#d2e4ff;text-decoration:underline;text-underline-offset:3px}.record-icon{width:15px;height:auto;display:inline-block;flex-shrink:0}
+    @media(max-width:900px){.service-layout{grid-template-columns:1fr}.cloud-panel{min-height:300px}.cloud-mark{margin:8px 0 20px}.cloud-button{margin-top:28px}.demo-card{grid-template-columns:130px minmax(0,1fr) auto;gap:16px}}
+    @media(max-width:680px){.demo-card{grid-template-columns:1fr;gap:14px;padding:16px}.demo-cover-wrap{width:100%;height:150px}.demo-button{width:100%}}
+    @media(max-width:600px){.container{width:calc(100% - 36px)}.top{height:60px}.brand{font-size:15px}.brand img{width:34px;height:34px}.top nav{gap:12px}.contact-link{padding:7px 11px;font-size:11px}main{padding:54px 0 70px}.intro p:last-child{font-size:14px}.service-layout{gap:26px;margin-top:30px}.service-heading{font-size:19px}.download-card{grid-template-columns:46px minmax(0,1fr);gap:11px;min-height:0;padding:16px}.platform-icon{width:46px;height:46px}.download-card h3{font-size:16px}.download-button{grid-column:1/-1;width:100%}.cloud-panel{padding:23px;min-height:0}.cloud-mark{width:60px;height:60px}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding:0;gap:12px}}
   </style>
 </head>
 <body>
@@ -33,14 +65,76 @@
     <div class="intro"><p class="eyebrow">MBTV DESKTOP / 下载试用</p><h1>把制片工作台<br>带到你的电脑上</h1><p>MBTV只在本地电脑存储剧本、分镜脚本与图片、视频，保护你的资产</p></div>
     <div class="service-layout">
       <section aria-labelledby="desktop-title"><h2 class="service-heading" id="desktop-title">下载 MBTV 桌面版</h2><div class="downloads" aria-label="选择下载版本">
-        <article class="download-card"><div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 6 14 4v11H3zm14-2 12-2v13H17zM3 18h11v11L3 27zm14 0h12v13l-12-2z"/></svg></div><div><p class="platform">Windows</p><h3>Windows 版</h3><p class="arch">仅支持 64 位 · x64</p></div><button class="download-button" type="button" disabled>暂未开放下载</button></article>
-        <article class="download-card mac"><div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M2 26h28l-3-4H5z"/></svg></div><div><p class="platform">macOS</p><h3>Mac Intel 版</h3><p class="arch">适用于 Intel 芯片的 Mac</p></div><button class="download-button" type="button" disabled>暂未开放下载</button></article>
-        <article class="download-card mac"><div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M2 26h28l-3-4H5z"/></svg></div><div><p class="platform">macOS</p><h3>Mac Apple 芯片版</h3><p class="arch">适用于 Apple 芯片 · ARM</p></div><button class="download-button" type="button" disabled>暂未开放下载</button></article>
+        <article class="download-card" data-platform="win32-x64">
+          <div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 6 14 4v11H3zm14-2 12-2v13H17zM3 18h11v11L3 27zm14 0h12v13l-12-2z"/></svg></div>
+          <div class="download-info">
+            <div class="platform-head"><p class="platform">Windows</p><span class="version-tag" hidden></span></div>
+            <h3>Windows 版</h3>
+            <p class="arch">仅支持 64 位 · x64</p>
+            <div class="download-meta" hidden>
+              <span class="meta-size"></span>
+              <span class="meta-dot">·</span>
+              <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
+            </div>
+          </div>
+          <button class="download-button" type="button" disabled>暂未开放下载</button>
+        </article>
+
+        <article class="download-card mac" data-platform="darwin-x64">
+          <div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M2 26h28l-3-4H5z"/></svg></div>
+          <div class="download-info">
+            <div class="platform-head"><p class="platform">macOS</p><span class="version-tag" hidden></span></div>
+            <h3>Mac Intel 版</h3>
+            <p class="arch">适用于 Intel 芯片的 Mac</p>
+            <div class="download-meta" hidden>
+              <span class="meta-size"></span>
+              <span class="meta-dot">·</span>
+              <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
+            </div>
+          </div>
+          <button class="download-button" type="button" disabled>暂未开放下载</button>
+        </article>
+
+        <article class="download-card mac" data-platform="darwin-arm64">
+          <div class="platform-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M2 26h28l-3-4H5z"/></svg></div>
+          <div class="download-info">
+            <div class="platform-head"><p class="platform">macOS</p><span class="version-tag" hidden></span></div>
+            <h3>Mac Apple 芯片版</h3>
+            <p class="arch">适用于 Apple 芯片 · ARM</p>
+            <div class="download-meta" hidden>
+              <span class="meta-size"></span>
+              <span class="meta-dot">·</span>
+              <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
+            </div>
+          </div>
+          <button class="download-button" type="button" disabled>暂未开放下载</button>
+        </article>
       </div><p class="help">不确定 Mac 的芯片类型？打开<strong>苹果菜单 → 关于本机</strong>查看。如需了解试用安排，可<a href="index.html#contact">联系我们</a>。</p></section>
-      <section class="cloud-panel" aria-labelledby="cloud-title"><p class="eyebrow">MBTV CLOUD / 云端服务</p><div class="cloud-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 34h23a9 9 0 0 0 1-18 13 13 0 0 0-25-2 10 10 0 0 0 1 20Z"/><circle cx="22" cy="25" r="3"/><path d="M25 25h10m-3 0v4"/></svg></div><h2 id="cloud-title">获取云端服务令牌</h2><p>注册云端服务后，可在这里获取用于连接 MBTV 云端服务的令牌。</p><button class="cloud-button" type="button" disabled>注册云端服务</button><span class="cloud-note">注册入口暂未开放</span></section>
+      <section class="cloud-panel" aria-labelledby="cloud-title"><p class="eyebrow">MBTV CLOUD / 云端服务</p><div class="cloud-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 34h23a9 9 0 0 0 1-18 13 13 0 0 0-25-2 10 10 0 0 0 1 20Z"/><circle cx="22" cy="25" r="3"/><path d="M25 25h10m-3 0v4"/></svg></div><h2 id="cloud-title">获取云端服务令牌</h2><p>注册云端服务后，可在这里获取用于连接 MBTV 云端服务的令牌。</p><a class="cloud-button" href="https://demo.mbtv.me" target="_blank" rel="noopener noreferrer">注册云端服务</a><span class="cloud-note">开放测试中</span></section>
     </div>
+    <section class="demo-section" aria-labelledby="demo-title">
+      <div class="demo-card">
+        <div class="demo-cover-wrap">
+          <img class="demo-cover" src="assets/showcase/doushabao-county-magistrate-ep01-cover.jpg" alt="《豆沙包县令史瑞可》" width="148" height="88" loading="lazy">
+          <span class="demo-tag">开源 AI 短剧</span>
+        </div>
+        <div class="demo-info">
+          <div class="demo-head">
+            <h3 id="demo-title" class="demo-title">《豆沙包县令史瑞可》开源AI短剧 演示项目压缩包</h3>
+            <span class="demo-size-pill">596.2 MB · ZIP</span>
+          </div>
+          <p class="demo-tip">将项目压缩包解压到MBTV项目根目录 <code>projects</code> 目录下，即可打开项目进行浏览、修改、再创作。</p>
+        </div>
+        <div class="demo-action">
+          <a class="demo-button" href="https://file.mbtv.me/demo.zip" download>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.69L6.53 8.72a.75.75 0 0 0-1.06 1.06l4 4a.75.75 0 0 0 1.06 0l4-4a.75.75 0 1 0-1.06-1.06l-2.72 2.72V2.75Z"/><path d="M3.5 14.75a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H4.25a.75.75 0 0 1-.75-.75Z"/></svg>
+            <span>下载项目压缩包</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </div></main>
-  <footer><div class="container footer-inner"><span>© 2026 MBTV（漫布制片）mbtv.me</span><span>一念漫布，万象成篇 / Mind it. Build it.</span></div></footer>
+  <footer><div class="container footer-inner"><div class="footer-left"><span>© 2026 MBTV（漫布制片）mbtv.me</span><div class="footer-records"><a class="record-link" href="https://beian.mps.gov.cn/#/query/webSearch?code=32021402002594" target="_blank" rel="noopener noreferrer"><img class="record-icon" src="assets/beian-icon.png" alt="全国公安机关互联网站安全管理服务平台图标" width="16" height="17"><span>苏公网安备 32021402002594号</span></a><a class="record-link" href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer"><span>苏ICP备2024096978号</span></a></div></div><div class="footer-right"><span>一念漫布，万象成篇 / Mind it. Build it.</span></div></div></footer>
   <script>
   var _hmt = _hmt || [];
   (function() {
@@ -48,6 +142,153 @@
     hm.src = "https://hm.baidu.com/hm.js?e7a64b180e5ef945379a3bcc87864935";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <script>
+  (function() {
+    function formatBytes(bytes) {
+      if (!bytes || isNaN(bytes)) return '';
+      var units = ['B', 'KB', 'MB', 'GB'];
+      var i = 0, val = Number(bytes);
+      while (val >= 1024 && i < units.length - 1) {
+        val /= 1024;
+        i++;
+      }
+      return val.toFixed(1) + ' ' + units[i];
+    }
+
+    function updateCard(card, info, defaultVersion) {
+      var verTag = card.querySelector('.version-tag');
+      var meta = card.querySelector('.download-meta');
+      var sizeEl = card.querySelector('.meta-size');
+      var hashEl = card.querySelector('.meta-hash code');
+      var hashContainer = card.querySelector('.meta-hash');
+      var currentBtn = card.querySelector('.download-button');
+
+      if (!info || !info.url) {
+        if (verTag) verTag.hidden = true;
+        if (meta) meta.hidden = true;
+        if (currentBtn && currentBtn.tagName === 'A') {
+          var btn = document.createElement('button');
+          btn.className = 'download-button';
+          btn.type = 'button';
+          btn.disabled = true;
+          btn.textContent = '暂未开放下载';
+          currentBtn.replaceWith(btn);
+        } else if (currentBtn) {
+          currentBtn.disabled = true;
+          currentBtn.textContent = '暂未开放下载';
+        }
+        return;
+      }
+
+      var ver = info.version || defaultVersion || '';
+      if (verTag && ver) {
+        verTag.textContent = ver.startsWith('v') ? ver : 'v' + ver;
+        verTag.hidden = false;
+      }
+
+      if (meta) {
+        var hasMeta = false;
+        if (info.size && sizeEl) {
+          sizeEl.textContent = formatBytes(info.size);
+          hasMeta = true;
+        }
+        if (info.sha256 && hashEl) {
+          var fullHash = String(info.sha256);
+          var shortHash = fullHash.length > 14 ? fullHash.slice(0, 6) + '...' + fullHash.slice(-6) : fullHash;
+          hashEl.textContent = shortHash;
+          hashContainer.title = 'SHA-256: ' + fullHash + ' (点击复制)';
+          hashContainer.onclick = function(e) {
+            e.preventDefault();
+            navigator.clipboard.writeText(fullHash).then(function() {
+              var tip = hashContainer.querySelector('.copy-btn');
+              if (tip) {
+                var orig = tip.textContent;
+                tip.textContent = '已复制✓';
+                setTimeout(function() { tip.textContent = orig; }, 1800);
+              }
+            });
+          };
+          hasMeta = true;
+        }
+        meta.hidden = !hasMeta;
+      }
+
+      if (currentBtn) {
+        var link = document.createElement('a');
+        link.className = 'download-button';
+        link.href = info.url;
+        link.textContent = '最新版下载（公测中）';
+        currentBtn.replaceWith(link);
+      }
+    }
+
+    function applyData(data) {
+      if (!data || !data.platforms) return;
+      var platforms = data.platforms;
+      document.querySelectorAll('.download-card[data-platform]').forEach(function(card) {
+        var key = card.getAttribute('data-platform');
+        var info = platforms[key];
+        updateCard(card, info, data.version);
+      });
+    }
+
+    var defaultData = {
+      version: '1.0.20',
+      platforms: {
+        'darwin-arm64': {
+          version: '1.0.20',
+          file: 'MBTV-1.0.20-darwin-arm64.dmg',
+          url: 'https://file.mbtv.me/MBTV-1.0.20-darwin-arm64.dmg',
+          size: 204371258,
+          sha256: '01c757c8a2c2796386494545bc8cf2d3e8715882477381b3bd32754245a7843e'
+        },
+        'win32-x64': {
+          version: '1.0.20',
+          file: 'MBTV-1.0.20-win32-x64-setup.exe',
+          url: 'https://file.mbtv.me/MBTV-1.0.20-win32-x64-setup.exe',
+          size: 199368946,
+          sha256: '5f1e431afaaff1ead09d6680aeca3fbe513f715a90bff4783ef0c19e2e6ac8ae'
+        },
+        'darwin-x64': {
+          version: '1.0.20',
+          file: 'MBTV-1.0.20-darwin-x64.dmg',
+          url: 'https://file.mbtv.me/MBTV-1.0.20-darwin-x64.dmg',
+          size: 219386159,
+          sha256: '35f27da6b227ba8a2cfba769c82e1970f0c4ebf67d569e53e0e0995c80be3902'
+        }
+      }
+    };
+
+    // Apply initial data immediately
+    applyData(defaultData);
+
+    async function loadVersions() {
+      var endpoints = [
+        'https://file.mbtv.me/versions.json',
+        '/versions.json',
+        'versions.json'
+      ];
+      for (var i = 0; i < endpoints.length; i++) {
+        try {
+          var res = await fetch(endpoints[i]);
+          if (res.ok) {
+            var data = await res.json();
+            if (data && data.platforms) {
+              applyData(data);
+              break;
+            }
+          }
+        } catch (e) {}
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadVersions);
+    } else {
+      loadVersions();
+    }
   })();
   </script>
 </body>
