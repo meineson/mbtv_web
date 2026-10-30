@@ -77,7 +77,7 @@
               <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
             </div>
           </div>
-          <button class="download-button" type="button" disabled>暂未开放下载</button>
+          <button class="download-button" type="button" disabled>加载中...</button>
         </article>
 
         <article class="download-card mac" data-platform="darwin-x64">
@@ -92,7 +92,7 @@
               <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
             </div>
           </div>
-          <button class="download-button" type="button" disabled>暂未开放下载</button>
+          <button class="download-button" type="button" disabled>加载中...</button>
         </article>
 
         <article class="download-card mac" data-platform="darwin-arm64">
@@ -107,7 +107,7 @@
               <span class="meta-hash" role="button" tabindex="0" title="点击复制完整 SHA-256 哈希值">SHA-256: <code></code> <span class="copy-btn">复制</span></span>
             </div>
           </div>
-          <button class="download-button" type="button" disabled>暂未开放下载</button>
+          <button class="download-button" type="button" disabled>加载中...</button>
         </article>
       </div><p class="help">不确定 Mac 的芯片类型？打开<strong>苹果菜单 → 关于本机</strong>查看。如需了解试用安排，可<a href="index.html#contact">联系我们</a>。</p></section>
       <section class="cloud-panel" aria-labelledby="cloud-title"><p class="eyebrow">MBTV CLOUD / 云端服务</p><div class="cloud-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 34h23a9 9 0 0 0 1-18 13 13 0 0 0-25-2 10 10 0 0 0 1 20Z"/><circle cx="22" cy="25" r="3"/><path d="M25 25h10m-3 0v4"/></svg></div><h2 id="cloud-title">获取云端服务令牌</h2><p>注册云端服务后，可在这里获取用于连接 MBTV 云端服务的令牌。</p><a class="cloud-button" href="https://demo.mbtv.me" target="_blank" rel="noopener noreferrer">注册云端服务</a><span class="cloud-note">开放测试中</span></section>
@@ -234,35 +234,34 @@
       });
     }
 
-    var defaultData = {
-      version: '1.0.20',
-      platforms: {
-        'darwin-arm64': {
-          version: '1.0.20',
-          file: 'MBTV-1.0.20-darwin-arm64.dmg',
-          url: 'https://file.mbtv.me/MBTV-1.0.20-darwin-arm64.dmg',
-          size: 204371258,
-          sha256: '01c757c8a2c2796386494545bc8cf2d3e8715882477381b3bd32754245a7843e'
-        },
-        'win32-x64': {
-          version: '1.0.20',
-          file: 'MBTV-1.0.20-win32-x64-setup.exe',
-          url: 'https://file.mbtv.me/MBTV-1.0.20-win32-x64-setup.exe',
-          size: 199368946,
-          sha256: '5f1e431afaaff1ead09d6680aeca3fbe513f715a90bff4783ef0c19e2e6ac8ae'
-        },
-        'darwin-x64': {
-          version: '1.0.20',
-          file: 'MBTV-1.0.20-darwin-x64.dmg',
-          url: 'https://file.mbtv.me/MBTV-1.0.20-darwin-x64.dmg',
-          size: 219386159,
-          sha256: '35f27da6b227ba8a2cfba769c82e1970f0c4ebf67d569e53e0e0995c80be3902'
+    function setLoading() {
+      document.querySelectorAll('.download-card[data-platform]').forEach(function(card) {
+        var verTag = card.querySelector('.version-tag');
+        var meta = card.querySelector('.download-meta');
+        var currentBtn = card.querySelector('.download-button');
+        if (verTag) verTag.hidden = true;
+        if (meta) meta.hidden = true;
+        if (currentBtn && currentBtn.tagName === 'A') {
+          var btn = document.createElement('button');
+          btn.className = 'download-button';
+          btn.type = 'button';
+          btn.disabled = true;
+          btn.textContent = '加载中...';
+          currentBtn.replaceWith(btn);
+        } else if (currentBtn) {
+          currentBtn.disabled = true;
+          currentBtn.textContent = '加载中...';
         }
-      }
-    };
+      });
+    }
 
-    // Apply initial data immediately
-    applyData(defaultData);
+    function setUnavailable() {
+      document.querySelectorAll('.download-card[data-platform]').forEach(function(card) {
+        updateCard(card, null);
+      });
+    }
+
+    setLoading();
 
     async function loadVersions() {
       var endpoints = [
@@ -270,6 +269,7 @@
         '/versions.json',
         'versions.json'
       ];
+      var loaded = false;
       for (var i = 0; i < endpoints.length; i++) {
         try {
           var res = await fetch(endpoints[i]);
@@ -277,10 +277,14 @@
             var data = await res.json();
             if (data && data.platforms) {
               applyData(data);
+              loaded = true;
               break;
             }
           }
         } catch (e) {}
+      }
+      if (!loaded) {
+        setUnavailable();
       }
     }
 

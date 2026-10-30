@@ -1,0 +1,30 @@
+{
+  "version": "1.0.22",
+  "name": "MBTV 漫布制片",
+  "updatedAt": "2026-10-29T06:05:52.868Z",
+  "downloadUrl": "https://mbtv.me/download.html",
+  "manifestUrl": "https://file.mbtv.me/versions.json",
+  "platforms": {
+    "darwin-arm64": {
+      "version": "1.0.22",
+      "file": "MBTV-1.0.22-darwin-arm64.dmg",
+      "url": "https://file.mbtv.me/MBTV-1.0.22-darwin-arm64.dmg",
+      "size": 204377571,
+      "sha256": "58e5bce5f97fec2e56ecb95bfb2a4fc220cc2c9afda30e0050500da95a1cc38d"
+    },
+    "win32-x64": {
+      "version": "1.0.22",
+      "file": "MBTV-1.0.22-win32-x64-setup.exe",
+      "url": "https://file.mbtv.me/MBTV-1.0.22-win32-x64-setup.exe",
+      "size": 199425754,
+      "sha256": "03ad1837da0269dc58d4629f8d90ca66d74151ff9b4ea3b6c0609e63e0fe45dc"
+    },
+    "darwin-x64": {
+      "version": "1.0.22",
+      "file": "MBTV-1.0.22-darwin-x64.dmg",
+      "url": "https://file.mbtv.me/MBTV-1.0.22-darwin-x64.dmg",
+      "size": 219389527,
+      "sha256": "32412076e5909f9df9f4c8b88c37e86947c06a64ccb2ffbfd76884f259893633"
+    }
+  }
+}
