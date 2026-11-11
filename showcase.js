@@ -9,7 +9,8 @@ const showcaseVideos = [
   {title:'豆沙包县令史瑞可 · EP01', detail:'短剧 · 2分02秒', src:'https://file.mbtv.me/demo/doushabao-county-magistrate-ep01-720p.mp4', poster:'assets/showcase/doushabao-county-magistrate-ep01-cover.jpg'},
   {title:'豆沙包县令史瑞可 · EP02', detail:'短剧 · 2分47秒', src:'https://file.mbtv.me/demo/doushabao-county-magistrate-ep02-720p.mp4', poster:'assets/showcase/doushabao-county-magistrate-ep02-cover.jpg'},
   {title:'豆沙包县令史瑞可 · EP03', detail:'短剧 · 2分09秒', src:'https://file.mbtv.me/demo/doushabao-county-magistrate-ep03-720p.mp4', poster:'assets/showcase/doushabao-county-magistrate-ep03-cover.jpg'},
-  {title:'当了爸爸后，我才明白了当年那晚的甘蔗', detail:'短剧 · 3分55秒', src:'https://file.mbtv.me/demo/ganzhe-720p.mp4', poster:'assets/showcase/ganzhe-cover.jpg'}
+  {title:'当了爸爸后，我才明白了当年那晚的甘蔗', detail:'短剧 · 3分55秒', src:'https://file.mbtv.me/demo/ganzhe-720p.mp4', poster:'assets/showcase/ganzhe-cover.jpg'},
+  {title:'仙界一日游 · 第二版', detail:'短剧 · 2分17秒', src:'https://file.mbtv.me/demo/xianjie-v2-720p.mp4', poster:'assets/showcase/xianjie-v2-cover.jpg'}
 ];
 
 (() => {
